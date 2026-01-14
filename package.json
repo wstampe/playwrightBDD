@@ -1,0 +1,28 @@
+{
+  "name": "playwrightBDD",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wstampe/playwrightBDD.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.8"
+  },
+  "scripts": {
+    "test-npp": "npx cucumber-js --tags @Nppuser",
+    "test-single": "npx cucumber-js --tags @single",
+    "test-branch": "npx cucumber-js --tags @BranchUser",
+    "test-logon": "npx cucumber-js --tags @login",
+    "test-inventory": "npx cucumber-js --tags @inventory",
+    "test-reported": "npx cucumber-js --tags @Nppuser -f json:features/reports/json_report/report.json",
+    "clear-report": "rm -rf features/reports/*",
+    "generate-report": "node reporter.js",
+    "generate-multi-report": "node multireporter.js"
+  },
+  "dependencies": {
+    "chai": "4.3.10",
+    "cucumber-html-reporter": "^7.2.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  }
+}

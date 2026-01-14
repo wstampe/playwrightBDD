@@ -1,0 +1,6 @@
+{
+  "login": "[data-test='login-button']",
+  "login error": "[data-test='error']",
+  "username": "[data-test='username']",
+  "password": "[data-test='password']"
+}
